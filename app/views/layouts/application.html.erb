@@ -5,8 +5,31 @@
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
+	<!--[if lt IE 9]>
+	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->  
 </head>
 <body>
-	<%= yield %>
+	
+	<div class="container">
+		<img src="/assets/hbsc_banner_1.jpg" />
+		<header class="navbar">
+			<div class="navbar-inner">
+					<nav>
+						<ul class="nav pull-right">
+							<li><%= link_to "Home",	'#' %></li>
+							<li><%= link_to "Publications",	'#' %></li>
+							<li><%= link_to "Master Data",	'#' %></li>
+							<li><%= link_to "About",	'#' %></li>
+							<li><%= link_to "Contact",	'#' %></li>
+						</ul>
+					</nav>
+				
+			</div>
+		</header>
+	
+		<%= yield %>
+	</div>
+
 </body>
 </html>
