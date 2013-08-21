@@ -30,4 +30,18 @@ describe "Pages" do
 		it { should have_selector('h1', text: 'Master Data') }
 		it { should have_selector('title', text: full_title('Master Data') ) }	
 	end
+
+	it "should have the right link on the layout" do
+		visit root_path
+		click_link "About"
+		page.should have_selector 'title', text: full_title('About')
+		click_link "Contant"
+		page.should have_selector 'title', text: full_title('Contact')
+		click_link "Master Data"
+		page.should have_selector 'title', text: full_title('Master Data')
+		click_link "Home"
+		click.link "Register"
+		page.should have_selector 'title', text: full_title('Register')
+	end
+
 end

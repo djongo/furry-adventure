@@ -1,8 +1,9 @@
-def full_title(page_title)
-  base_title = "HBSC Puma"
-  if page_title.empty?
-    base_title
-  else
-    "#{base_title} | #{page_title}"
-  end
-end
+#def full_title(page_title)
+#  base_title = "HBSC"
+#  if page_title.empty?
+#    base_title
+#  else
+#    "#{base_title} | #{page_title}"
+#  end
+#end
+include ApplicationHelper
