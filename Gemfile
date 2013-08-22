@@ -4,6 +4,8 @@ gem 'rails', '3.2.13'
 gem 'bootstrap-sass', '2.3.1.3'
 gem 'pg', '0.12.2'
 gem 'sorcery'
+gem 'declarative_authorization'
+gem 'will_paginate'
 
 group :development, :test do
 #  gem 'sqlite3', '1.3.5'
