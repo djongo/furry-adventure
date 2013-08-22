@@ -10,9 +10,13 @@
 					<li><%= link_to "Contact",	contact_path %></li>
 				</ul>
 				<ul class="nav pull-right">
-					<li><%= link_to "Register",	'#' %></li>
-					<li><%= link_to "Log in",	'#' %></li>
-					<li><%= link_to "Forgotten password",	'#' %></li>
+					<% if current_user %>
+						<li><%= link_to current_user.email, '#' %></li>
+						<li><%= link_to 'Log out', logout_path %></li>
+					<% else %>
+						<li><%= link_to "Register",	register_path %></li>
+						<li><%= link_to "Log in",	login_path %></li>
+					<% end %>
 				</ul>
 			</nav>
 		
